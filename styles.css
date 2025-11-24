@@ -6,33 +6,33 @@ html, body{
 
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: top left;
     align-items: center;
-    height: 100vh;
+    margin: 6px;
+    height: 8vh;
+    min-width: 320px;
+    
 }
-.button-border{
-    background: linear-gradient(115deg ,#eeaf61,#fb9062, #ee5d6c,#ce4993, #6a0d83);
-    padding: 2px;
-}
-
-.button{
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 1rem 1.5rem;
+.search-bar{
+    width: 40%;
     font-size: 1.5rem;
-    cursor: pointer;
+    border: none;
     border-radius: 8px;
-    font-family: inherit;
-    letter-spacing: 0.2rem;
-    /*border-image: linear-gradient(115deg ,#eeaf61,#fb9062, #ee5d6c,#ce4993, #6a0d83); border-image-slice: 1;*/
+    outline: none;
+    transition: all 0.8s;
+}
+.search-bar::placeholder{
+    padding: 0.5rem;
+    color: rgb(0, 0, 0);
 }
 
-.button-border:hover {
-    background: linear-gradient(230deg ,#eeaf61, #fb9062, #ee5d6c,#ce4993, #6a0d83);
+.search-bar:focus{
+    box-shadow: 0 0 10px orangered;
+    place-content: none;
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+  
 }
-
-.button-border:hover .button{
-    color: gray;
-    padding : 1.1rem 1.6rem;
+.search-bar:focus::placeholder{
+    color: transparent;
 }
