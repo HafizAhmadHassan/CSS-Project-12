@@ -11,26 +11,33 @@
 
 
 
-.circle1, .circle2, .circle3{
-    
+.circle1, .circle2, .circle3 {
     background-color: white;
-    transform: rotate(45deg);   /* ✅ correct */
-    margin: 40px;
+    margin: 20px;
     width: 100px;
     height: 100px;
     opacity: 0.6;
-    rotate: 90deg;
-    animation: pulse infinite alternate 1s;
+    animation: pulse 1s infinite alternate, spin 3s linear infinite;
 }
-@keyframes pulse{
-    from  {
-        transform: rotate(45deg);
-       background-color: rgb(134, 128, 128);;
+
+/* Pulse animation (grow/shrink + color change) */
+@keyframes pulse {
+    from {
+        background-color: rgb(134, 128, 128);
+        transform: scale(1);
     }
-    to{
-        background-color: rgb(246, 110, 110);
-        transform: rotate(-45deg);
-        height: 150px;
-        width: 150px;
+    to {
+        background-color: rgb(241, 241, 241);
+        transform: scale(1.5);
+    }
+}
+
+/* Continuous rotation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
