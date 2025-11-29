@@ -5,41 +5,24 @@
     align-items: center;
     height: 100vh;
     background-color: rgb(128, 216, 214);
+    
 
     
 }
 
-.myContent::after{
-    content: '';
-    height: 200px;
-    width: 200px;
-    animation: swap 6s infinite;
+.red-part{
+    width: 150px;
+    height: 400px;
+   
+    background-color: red;;
 }
-
-@keyframes swap {
-    0%{
-        content: "Singing";
-        border-radius: 0%;
-        background-color: red;
-    }
-    25%{
-        content: "Dancing";
-        border-radius: 25%;
-        background-color: yellow;
-    }
-    50%{
-        content: "Coding";
-        border-radius: 50%;
-        background-color: green;
-    }
-    75%{
-        content: "Sleeping";
-        border-radius: 75%;
-        background-color: blue;
-    }
-    100%{
-        content: "Eating";
-        border-radius: 100%;
-        background-color: purple;
-    }
+.white-part{
+    width: 150px;
+    height: 400px;
+    background-color: white;;
+}
+.blue-part{
+   width: 150px;
+    height: 400px;
+    background-color: blue;;
 }
