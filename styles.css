@@ -4,78 +4,42 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(95, 68, 68);
+    background-color: rgb(128, 216, 214);
 
     
 }
 
-
-
-.circle1, .circle2, .circle3, .circle4 {
-    margin: 20px;
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: pulse 2s infinite alternate,
-               spin 5s linear infinite;
-}
-
-.circle1 {
-    width: 100px;
-    height: 100px;
-    color: rgb(191, 255, 0);
-}
-.circle2 {
-    width: 150px;
-    height: 150px;
-    color: rgb(255, 0, 0);
-}
-.circle3 {
-    width: 200px;
+.myContent::after{
+    content: '';
     height: 200px;
-    color: rgb(38, 0, 255);
-}
-.circle4 {
-    width: 250px;
-    height: 250px;
-    color: rgb(56, 163, 156);
-}
-/* Pulse animation (same for all) */
-@keyframes pulse {
-    from { transform: scale(1); }
-    to   { transform: scale(1.5); }
+    width: 200px;
+    animation: swap 6s infinite;
 }
 
-/* Continuous rotation (same for all) */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-
-/* Color cycling */
-@keyframes colorShift {
-    0%   { background-color: red; }
-    25%  { background-color: orange; }
-    50%  { background-color: yellow; }
-    75%  { background-color: green; }
-    100% { background-color: blue; }
-}
-
-/* Different speeds for each circle */
-.circle1 {
-    animation: pulse 2s infinite alternate,
-               spin 5s linear infinite,
-               colorShift 4s linear infinite;
-}
-
-.circle2 {
-    animation: pulse 2s infinite alternate,
-               spin 5s linear infinite,
-               colorShift 6s linear infinite;
-}
-
-.circle3 {
-    animation: pulse 2s infinite alternate,
-               spin 5s linear infinite,
-               colorShift 8s linear infinite;
+@keyframes swap {
+    0%{
+        content: "Singing";
+        border-radius: 0%;
+        background-color: red;
+    }
+    25%{
+        content: "Dancing";
+        border-radius: 25%;
+        background-color: yellow;
+    }
+    50%{
+        content: "Coding";
+        border-radius: 50%;
+        background-color: green;
+    }
+    75%{
+        content: "Sleeping";
+        border-radius: 75%;
+        background-color: blue;
+    }
+    100%{
+        content: "Eating";
+        border-radius: 100%;
+        background-color: purple;
+    }
 }
