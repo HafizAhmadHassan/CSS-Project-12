@@ -5,24 +5,27 @@
     align-items: center;
     height: 100vh;
     background-color: rgb(128, 216, 214);
+    flex-direction: column;
     
 
     
+}
+.orient {
+    height: 33px;
+    width: 100px;
+
 }
 
 .red-part{
-    width: 150px;
-    height: 400px;
+ 
    
     background-color: red;;
 }
-.white-part{
-    width: 150px;
-    height: 400px;
-    background-color: white;;
+.yellow-part{
+  
+    background-color: yellow;;
 }
-.blue-part{
-   width: 150px;
-    height: 400px;
-    background-color: blue;;
+.black-part{
+
+    background-color: black;;
 }
