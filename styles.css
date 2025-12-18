@@ -1,31 +1,33 @@
+:root  {
+    --red-color: #ff0000;
+    --yellow-color: #ffff00;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --flag-hw: 200px;
+}
 
-.contianer {
+
+.flag-swiss{
+
+    height: var(--flag-hw);
+    width: var(--flag-hw);
+    background: var(--red-color);
+    margin : 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: rgb(128, 216, 214);
-    flex-direction: column;
-    
-
-    
-}
-.orient {
-    height: 33px;
-    width: 100px;
-
+    position: relative;
 }
 
-.red-part{
- 
-   
-    background-color: red;;
+.cross1 {
+    height : calc(var(--flag-hw) * 3/16);
+    width  : calc(var(--flag-hw) * 5/8);
+    background: var(--white-color);
 }
-.yellow-part{
-  
-    background-color: yellow;;
-}
-.black-part{
 
-    background-color: black;;
+.cross2 {
+    height : calc(var(--flag-hw) * 5/8);
+    width  : calc(var(--flag-hw) * 3/16);
+    background: var(--white-color);
+    position: absolute;
 }

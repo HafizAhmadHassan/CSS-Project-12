@@ -1,0 +1,33 @@
+
+
+
+.contianer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(128, 216, 214);
+    flex-direction: column;
+    
+
+    
+}
+.orient {
+    height: 33px;
+    width: 100px;
+
+}
+
+.red-part{
+ 
+   
+    background-color: red;;
+}
+.yellow-part{
+  
+    background-color: yellow;;
+}
+.black-part{
+
+    background-color: black;;
+}
